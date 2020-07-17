@@ -46,9 +46,6 @@ public class HeapSort {
                 maxIndex = leftIndex;
             }
             if (array[index] >= array[maxIndex]) {
-                maxIndex = index;
-            }
-            if (index == maxIndex) {
                 break;
             }
             swap(array, maxIndex, index);

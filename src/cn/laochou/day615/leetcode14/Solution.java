@@ -29,17 +29,17 @@ public class Solution {
             return strs[0];
         }
         String first = strs[0];
-        int index = 0;
-        for (int j = 1; j < strs.length; j++) {
-            char c = first.charAt(index);
-            // 注意这里必须使用 <=
-            if(strs[j].length() <= index || strs[j].charAt(index) != c) {
-                break;
-            }else {
-                index++;
+        for(int i = 0; i < first.length(); i++) {
+            char c = first.charAt(i);
+            for (int j = 1; j < strs.length; j++) {
+                // 注意这里必须使用 <=
+                if(strs[j].length() <= i || strs[j].charAt(i) != c) {
+                    return first.substring(0, i);
+                }
             }
         }
-        return first.substring(0, index);
+
+        return first;
     }
 
 

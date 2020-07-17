@@ -1,7 +1,5 @@
 package cn.laochou.day625.二叉树;
 
-import apple.laf.JRSUIUtils;
-
 import java.util.Stack;
 
 /**
@@ -69,6 +67,28 @@ public class BinaryTree {
         afterOrder(root.left);
         afterOrder(root.right);
         System.out.println(root.val);
+    }
+
+
+    // 非递归版本后序遍历
+    public void afterOrderNonRecursion(TreeNode root) {
+        if(root == null) return;
+        Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode> res = new Stack<>();
+        stack.add(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            res.add(node);
+            if(node.left != null) {
+                stack.push(node.left);
+            }
+            if(node.right != null) {
+                stack.push(node.right);
+            }
+        }
+        while (!res.isEmpty()) {
+            System.out.println(res.pop().val + " ");
+        }
     }
 
 }

@@ -11,7 +11,7 @@ public class Solution {
      */
     public ListNode getKthFromEnd(ListNode head, int k) {
         ListNode ans = head;
-        // 注意， 0-k-1 就是走了 k-1 步
+        // 注意， 0-k-1 就是走了 k 步
         for(int i = 0; i < k; i++) {
             if(head == null) {
                 return null;
