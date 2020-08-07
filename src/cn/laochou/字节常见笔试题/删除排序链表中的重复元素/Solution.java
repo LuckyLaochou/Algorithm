@@ -15,9 +15,6 @@ public class Solution {
             ListNode cur = head.next;
             while (cur != null && head.val == cur.val) {
                 cur = cur.next;
-                if(cur == null) {
-                    break;
-                }
             }
             head.next = cur;
             head = head.next;

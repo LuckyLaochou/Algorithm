@@ -24,7 +24,7 @@ public class Solution {
         if(root == null) return 0;
         int left = getHeight(root.left);
         int right = getHeight(root.right);
-        if(left == -1 || right == -1 ||Math.abs(left - right) > 1) {
+        if(left == -1 || right == -1 || Math.abs(left - right) > 1) {
             return -1;
         }
         return left > right ? 1 + left : 1 + right;

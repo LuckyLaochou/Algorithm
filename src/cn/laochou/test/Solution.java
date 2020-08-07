@@ -11,6 +11,8 @@ import java.util.List;
 public class Solution {
 
 
+    private String name = "tomn";
+
     public boolean validString(String s) {
         boolean size = s.length() >= 16;
         String regex = "^[a-z-A-Z]+$";
@@ -38,9 +40,6 @@ public class Solution {
 
 
     public static void main(String[] args) {
-        String s = "a b c d e f g";
-        String[] cs = s.split(" ");
-        System.out.println(Arrays.toString(cs));
     }
 
 
