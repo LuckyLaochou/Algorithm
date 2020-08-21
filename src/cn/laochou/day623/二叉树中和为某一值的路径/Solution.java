@@ -1,6 +1,5 @@
 package cn.laochou.day623.二叉树中和为某一值的路径;
 
-import org.omg.CORBA.INTERNAL;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,7 +23,7 @@ public class Solution {
         }
         path.add(root.val);
         int count = getCount(path);
-        if(count == sum) {
+        if(count == sum && root.left == null && root.right == null) {
             res.add(new ArrayList<>(path));
         }
         recursion(root.left, sum, res, path);
