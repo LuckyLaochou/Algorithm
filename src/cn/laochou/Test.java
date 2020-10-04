@@ -30,4 +30,19 @@ public class Test {
         System.out.println("value is " + ((x > 4) ? 99.9 : 9));
     }
 
+
+
+    public int two(int[] arr) {
+        int sum = 0;
+        int max = Integer.MIN_VALUE;
+        for(int item : arr) {
+            if(sum < 0) {
+                sum = 0;
+            }
+            sum += item;
+            max = Math.max(max, sum);
+        }
+        return max;
+    }
+
 }

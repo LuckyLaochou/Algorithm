@@ -1,6 +1,6 @@
 package cn.laochou.day617.leetcode11;
 
-public class Solution {
+public class  Solution {
 
     /**
      * AC

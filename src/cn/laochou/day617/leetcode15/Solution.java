@@ -41,7 +41,7 @@ public class Solution {
                 if(count > 0) {
                     right--;
                 }
-                if (count < 0) {
+                if(count < 0) {
                     left++;
                 }
             }

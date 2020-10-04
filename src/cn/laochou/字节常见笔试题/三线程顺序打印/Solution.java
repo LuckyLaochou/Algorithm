@@ -38,7 +38,7 @@ class Work implements Runnable {
     public void run() {
         for(int i = 1; i < count; i++) {
             synchronized (lock) {
-                if(index % 3 != value) {
+                while (index % 3 != value) {
                     try {
                         lock.wait();
                     } catch (InterruptedException e) {

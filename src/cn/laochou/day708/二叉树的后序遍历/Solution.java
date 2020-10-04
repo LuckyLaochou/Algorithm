@@ -31,6 +31,23 @@ public class Solution {
     }
 
 
+    public void midOrderNonRecursion(TreeNode root) {
+        if(root == null) return;
+        Stack<TreeNode> stack = new Stack<>();
+        while (!stack.isEmpty() || root != null) {
+            while (root != null) {
+                stack.add(root);
+                root = root.left;
+            }
+            if(!stack.isEmpty()) {
+                root = stack.pop();
+                System.out.println(root.val);
+                root = root.right;
+            }
+        }
+    }
+
+
     public static void main(String[] args) {
         Solution solution = new Solution();
         TreeNode root = new TreeNode(0);
@@ -38,7 +55,8 @@ public class Solution {
         root.right = new TreeNode(2);
         root.left.right = new TreeNode(3);
         root.left.left = new TreeNode(4);
-        solution.afterOrderNonRecursion(root);
+//        solution.afterOrderNonRecursion(root);
+        solution.midOrderNonRecursion(root);
     }
 
 }
